@@ -1,15 +1,9 @@
 FROM python:3.11-slim
 
-ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1
-
 WORKDIR /app
-
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-EXPOSE 8080
+RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python", "draftfinalpython.py"]
+CMD exec gunicorn --bind :$PORT app:app
