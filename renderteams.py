@@ -921,6 +921,11 @@ def download_discovered():
     return send_file(LAST_DISCOVERED_FILE, as_attachment=True)
 
 
+#if __name__ == "__main__":
+#    print("Starting UI... open http://127.0.0.1:8080")
+#    app.run(host="127.0.0.1", port=8080, debug=False)
+
+
 if __name__ == "__main__":
-    print("Starting UI... open http://127.0.0.1:8080")
-    app.run(host="127.0.0.1", port=8080, debug=False)
+    port = int(os.environ.get("PORT", "5000"))
+    print(f"Starting UI... open http://0.0.0.0:{port}")
