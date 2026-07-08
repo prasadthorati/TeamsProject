@@ -51,8 +51,7 @@ USER_CACHE = {}
 
 DEFAULT_MESSAGE_HTML = (
     'Hi @Everyone,<br><br>'
-    'Please proceed with pre-piv, attach artefacts to CTASK and move to '
-    '&ldquo;In progress&rdquo; once done.<br>- CHG0690343 &ndash; Sat 04 July'
+    'Write you message here'
 )
 LAST_FORM_STATE = {
     "message_html": DEFAULT_MESSAGE_HTML,
@@ -922,6 +921,5 @@ def download_discovered():
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))
-    print(f"Starting on port {port}")
-    app.run(host="0.0.0.0", port=port, debug=False)
+    print("Starting UI... open http://127.0.0.1:5000")
+    app.run(host="127.0.0.1", port=5000, debug=False)
