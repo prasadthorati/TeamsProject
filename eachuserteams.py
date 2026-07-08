@@ -69,8 +69,7 @@ app.config["SESSION_COOKIE_SECURE"] = bool(os.environ.get("K_SERVICE"))
 
 DEFAULT_MESSAGE_HTML = (
     'Hi @Everyone,<br><br>'
-    'Please proceed with pre-piv, attach artefacts to CTASK and move to '
-    '&ldquo;In progress&rdquo; once done.<br>- CHG0690343 &ndash; Sat 04 July'
+    'Please write your message here'
 )
 
 
